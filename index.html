@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fattura Studio — Creative &amp; Art Direction</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="index.html" class="nav-brand">Fattura Studio</a>
+    </div>
+  </nav>
+
+  <!-- ══ HERO — Full Viewport Video ══════════════════ -->
+  <section class="hero" id="hero">
+    <video
+      class="hero-video"
+      src="444444.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    ></video>
+    <div class="hero-overlay"></div>
+
+    <!-- ══ Hero Logo: FATTURA STUDIO ══════════════════ -->
+    <div class="hero-logo" id="heroLogo">
+
+      <!-- FATTURA: testo orizzontale — canvas Blotter sovrapposto -->
+      <div class="logo-fattura-wrap" id="fatturaWrap">
+        <span class="logo-fattura" id="logoFattura">FATTURA</span>
+      </div>
+
+      <!-- STUDIO: 6 lettere in piedi, impilate dall'alto verso il basso -->
+      <div class="logo-studio-wrap" id="studioWrap">
+        <div class="logo-letter-cell"><span class="logo-studio-letter">S</span></div>
+        <div class="logo-letter-cell"><span class="logo-studio-letter">T</span></div>
+        <div class="logo-letter-cell"><span class="logo-studio-letter">U</span></div>
+        <div class="logo-letter-cell"><span class="logo-studio-letter">D</span></div>
+        <div class="logo-letter-cell"><span class="logo-studio-letter">I</span></div>
+        <div class="logo-letter-cell"><span class="logo-studio-letter">O</span></div>
+      </div>
+
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint" id="scrollHint">
+      <span class="scroll-hint__text">Scroll</span>
+      <div class="scroll-hint__line"></div>
+    </div>
+  </section>
+
+  <!-- ══ SELECTED WORK CAROUSEL ══════════════════════ -->
+  <section class="carousel-section">
+
+    <div class="section-intro">
+      <span class="label">Selected Work</span>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="carousel-wrap">
+
+      <button class="carousel-arrow arrow-prev" aria-label="Previous">
+        <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 2L4 7L9 12"/>
+        </svg>
+      </button>
+
+      <div class="carousel-scroll" id="homeCarousel">
+        <div class="carousel-track">
+
+          <div class="carousel-item">
+            <img src="9.jpg" alt="Fattura Studio">
+          </div>
+          <div class="carousel-item">
+            <img src="438159048_3721820194715792_3185677315185536268_n.png" alt="Fattura Studio">
+          </div>
+          <div class="carousel-item">
+            <img src="438154349_1152299342869761_7259791937399599328_n.png" alt="Fattura Studio">
+          </div>
+          <div class="carousel-item">
+            <img src="051_lemile.jpg" alt="Fattura Studio">
+          </div>
+          <div class="carousel-item">
+            <img src="048_loffmy.jpg" alt="Fattura Studio">
+          </div>
+          <div class="carousel-item">
+            <img src="033_loff_hom.jpg" alt="Fattura Studio">
+          </div>
+          <div class="carousel-item">
+            <img src="019_vivetta.jpg" alt="Fattura Studio">
+          </div>
+          <div class="carousel-item">
+            <img src="017_vivetta_resort.jpg" alt="Fattura Studio">
+          </div>
+
+        </div>
+      </div>
+
+      <button class="carousel-arrow arrow-next" aria-label="Next">
+        <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 2L10 7L5 12"/>
+        </svg>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <span class="label">© 2024 Fattura Studio</span>
+    <span class="label">Milan — Italy</span>
+  </footer>
+
+  <script src="blotter.min.js"></script>
+  <script src="liquidDistortMaterial.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

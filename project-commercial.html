@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Milé Campaign — Fattura Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body class="project-single-page">
+
+  <!-- ══ NAVBAR ══════════════════════════════════════ -->
+  <nav class="navbar navbar--dark" id="navbar">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="index.html" class="nav-brand">Fattura Studio</a>
+    </div>
+  </nav>
+
+  <!-- ══ TWO-PANEL LAYOUT ═════════════════════════════ -->
+  <div class="project-layout fade-in">
+
+    <!-- ── Sinistra: foto principale ── -->
+    <div class="project-layout__img-col">
+      <img
+        src="9.jpg"
+        alt="Le Milé Campaign"
+        id="projectMainImg"
+        class="project-hero__img"
+      >
+    </div>
+
+    <!-- ── Destra: info + miniature ── -->
+    <div class="project-layout__info-col">
+
+      <!-- Back -->
+      <div class="project-back-row">
+        <a href="projects.html" class="back-link">
+          <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.5 1L2.5 5.5L7.5 10"/>
+          </svg>
+          Back to Projects
+        </a>
+        <span class="label">Commercial</span>
+      </div>
+
+      <!-- Info -->
+      <div class="project-info-block">
+        <div>
+          <span class="label">Commercial — 2024</span>
+          <h1 class="project-title">Le Milé<br>Campaign</h1>
+          <p class="project-desc">
+            Una campagna commerciale contemporanea che fonde precisione architettonica
+            ed estetica fashion-forward. Girata tra gli spazi industriali e le geometrie
+            urbane di Milano, la serie esplora il dialogo tra rigore strutturale e la
+            fluidità del movimento. Ogni scatto è concepito come una composizione in cui
+            il corpo diventa elemento di paesaggio.
+          </p>
+        </div>
+        <div class="project-meta">
+          <div class="project-meta__item">
+            <span class="label">Client</span>
+            <span class="project-meta__val">Le Milé</span>
+          </div>
+          <div class="project-meta__item">
+            <span class="label">Year</span>
+            <span class="project-meta__val">2024</span>
+          </div>
+          <div class="project-meta__item">
+            <span class="label">Category</span>
+            <span class="project-meta__val">Commercial</span>
+          </div>
+          <div class="project-meta__item">
+            <span class="label">Location</span>
+            <span class="project-meta__val">Milan</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thumbnails -->
+      <div class="project-thumbs-block">
+
+        <div class="project-gallery__header">
+          <span class="label">Gallery</span>
+          <div class="category-line"></div>
+        </div>
+
+        <div class="carousel-wrap">
+
+          <button class="carousel-arrow arrow-prev" aria-label="Previous">
+            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 2L4 7L9 12"/>
+            </svg>
+          </button>
+
+          <div class="carousel-scroll" id="galleryCarousel">
+            <div class="carousel-track">
+
+              <div class="carousel-item carousel-item--thumb active-thumb" data-src="9.jpg">
+                <img src="9.jpg" alt="Le Milé 01">
+              </div>
+              <div class="carousel-item carousel-item--thumb" data-src="051_lemile.jpg">
+                <img src="051_lemile.jpg" alt="Le Milé 02">
+              </div>
+              <div class="carousel-item carousel-item--thumb" data-src="048_loffmy.jpg">
+                <img src="048_loffmy.jpg" alt="Le Milé 03">
+              </div>
+              <div class="carousel-item carousel-item--thumb" data-src="438159048_3721820194715792_3185677315185536268_n.png">
+                <img src="438159048_3721820194715792_3185677315185536268_n.png" alt="Le Milé 04">
+              </div>
+              <div class="carousel-item carousel-item--thumb" data-src="438154349_1152299342869761_7259791937399599328_n.png">
+                <img src="438154349_1152299342869761_7259791937399599328_n.png" alt="Le Milé 05">
+              </div>
+
+            </div>
+          </div>
+
+          <button class="carousel-arrow arrow-next" aria-label="Next">
+            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 2L10 7L5 12"/>
+            </svg>
+          </button>
+
+        </div><!-- /carousel-wrap -->
+      </div><!-- /project-thumbs-block -->
+
+    </div><!-- /info-col -->
+  </div><!-- /project-layout -->
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      /* ── Thumbnail carousel (arrows + drag) ── */
+      const galleryCarousel = document.getElementById('galleryCarousel');
+      if (galleryCarousel) {
+        const wrap    = galleryCarousel.closest('.carousel-wrap');
+        const step    = () => Math.round(galleryCarousel.clientWidth * 0.72);
+        const prevBtn = wrap.querySelector('.arrow-prev');
+        const nextBtn = wrap.querySelector('.arrow-next');
+
+        if (prevBtn) prevBtn.addEventListener('click', () =>
+          galleryCarousel.scrollBy({ left: -step(), behavior: 'smooth' }));
+        if (nextBtn) nextBtn.addEventListener('click', () =>
+          galleryCarousel.scrollBy({ left: step(), behavior: 'smooth' }));
+
+        let isDragging = false, startX = 0, scrollLeft = 0;
+        galleryCarousel.addEventListener('mousedown', e => {
+          isDragging = true; galleryCarousel.classList.add('is-dragging');
+          startX = e.pageX - galleryCarousel.offsetLeft; scrollLeft = galleryCarousel.scrollLeft;
+        });
+        galleryCarousel.addEventListener('mouseleave', () => { isDragging = false; galleryCarousel.classList.remove('is-dragging'); });
+        galleryCarousel.addEventListener('mouseup',    () => { isDragging = false; galleryCarousel.classList.remove('is-dragging'); });
+        galleryCarousel.addEventListener('mousemove', e => {
+          if (!isDragging) return; e.preventDefault();
+          galleryCarousel.scrollLeft = scrollLeft - (e.pageX - galleryCarousel.offsetLeft - startX) * 1.4;
+        });
+      }
+
+      /* ── Click miniatura → cambia foto principale ── */
+      const mainImg   = document.getElementById('projectMainImg');
+      const thumbs    = document.querySelectorAll('.carousel-item--thumb');
+      let isAnimating = false;
+
+      thumbs.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          if (isAnimating) return;
+          const newSrc = thumb.dataset.src;
+          if (mainImg.getAttribute('src') === newSrc) return;
+
+          isAnimating = true;
+          thumbs.forEach(t => t.classList.remove('active-thumb'));
+          thumb.classList.add('active-thumb');
+
+          mainImg.classList.add('is-changing');
+          setTimeout(() => {
+            mainImg.src = newSrc;
+            const done = () => { mainImg.classList.remove('is-changing'); isAnimating = false; };
+            mainImg.onload = done;
+            if (mainImg.complete) done();
+          }, 360);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Playwright debug files
+.playwright-mcp/
+
+# Screenshots di sviluppo
+*.png
+*.jpg
+!9.jpg
+!051_lemile.jpg
+!048_loffmy.jpg
+!033_loff_hom.jpg
+!019_vivetta.jpg
+!017_vivetta_resort.jpg
+!438159048_3721820194715792_3185677315185536268_n.png
+!438154349_1152299342869761_7259791937399599328_n.png
+!WhatsApp Image 2026-05-20 at 16.51.48.jpeg
+!hero-logo-1.png
+!logo-t1.png
+!logo-t2.png
+!logo-t3.png
+
+# Claude settings
+.claude/
+
+# Node
+node_modules/
